@@ -1,7 +1,17 @@
 <p>reference input/form</p>
 
 <form #formInput="ngForm">
-  <input type="text" name="firstName" ngModel #firstName="ngModel" required />
+  <input
+    type="text"
+    name="firstName"
+    ngModel
+    #firstName="ngModel"
+    required
+    pattern="[a-z]"
+    [ngClass]="
+      !firstName.valid ? 'border border-danger' : 'border border-success'
+    "
+  />
 </form>
 
 value: {{ firstName.value | json }}
