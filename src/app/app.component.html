@@ -1,0 +1,32 @@
+<p>reference input/form</p>
+
+<form #formInput="ngForm">
+  <input type="text" name="firstName" ngModel #firstName="ngModel" required />
+</form>
+
+value: {{ firstName.value | json }}
+<br />
+touched: {{ firstName.touched | json }}
+<br />
+untouched: {{ firstName.untouched | json }}
+<br />
+valid: {{ firstName.valid | json }}
+<br />
+dirty: {{ firstName.dirty | json }}
+<br />
+pristine: {{ firstName.pristine | json }}
+
+<hr />
+<!-- -------------------------------------------------------------- -->
+
+value: {{ formInput.value | json }}
+<br />
+touched: {{ formInput.touched | json }}
+<br />
+untouched: {{ formInput.untouched | json }}
+<br />
+valid: {{ formInput.valid | json }}
+<br />
+dirty: {{ formInput.dirty | json }}
+<br />
+pristine: {{ formInput.pristine | json }}
